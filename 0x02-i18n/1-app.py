@@ -3,7 +3,7 @@
 
 
 from flask import Flask, render_template
-from flask_babel import babel
+from flask_babel import Babel
 
 
 
@@ -21,7 +21,7 @@ app.config.from_object(Config)
 app.url_map.strict_slashes = False
 
 
-babel = Babel()
+babel = Babel(app)
 
 
 @app.route('/')
